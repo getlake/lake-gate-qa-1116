@@ -17,7 +17,7 @@ Webhook deliveries fail silently when the receiver is down. We want bounded retr
 3. Implement the retry worker with exponential backoff and jitter (model: Sonnet 5.5)
 4. Expose delivery status in the API (model: Sonnet 5.5)
 5. Tests for failure paths and duplicate deliveries (model: Haiku 5.5)
-6. Update the changelog and the README (model: haiku)
+6. Update the changelog and the README and docs (model: haiku)
 
 <!-- lake:estimate:start (generated, not part of the approved digest) -->
 ## Lake estimate
@@ -31,7 +31,7 @@ Overall complexity: **high** · Planned per step (default **Opus 5.5**): **$2.53
 | 3 | Implement the retry worker with exponential backoff and jitter | medium | Sonnet 5.5 | Sonnet 5.5 | $0.21–$0.71 |
 | 4 | Expose delivery status in the API | medium | Sonnet 5.5 | Sonnet 5.5 | $0.21–$0.71 |
 | 5 | Tests for failure paths and duplicate deliveries | low | Haiku 5.5 | Haiku 5.5 | <$0.01–$0.017 |
-| 6 | Update the changelog and the README | low | Haiku 5.5 | Haiku 5.5 | <$0.01 |
+| 6 | Update the changelog and the README and docs | low | Haiku 5.5 | Haiku 5.5 | <$0.01 |
 
 Same estimator and price table as lake-meter (API list prices as of 2026-11-12). Not a quote. Subscription plans spend quota, not these dollars.
 Auto-approve policy (on): needs a human (upper estimate $9.66 > $1.50; needs budget approval; 6 steps > 3; complexity high > low).
