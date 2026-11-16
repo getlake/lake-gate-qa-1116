@@ -9,8 +9,6 @@ on:
     types: [submitted, edited, dismissed]
   issue_comment:
     types: [created, edited, deleted]
-  push: # a policy change re-checks open PRs into this branch
-    paths: ['.lake/config.json']
 permissions:
   contents: read
   pull-requests: write # to post and update the summary comment
@@ -23,7 +21,7 @@ jobs:
   plan-gate:
     if: github.event_name != 'issue_comment' || (github.event.issue.pull_request && contains(github.event.comment.body, '/lake'))
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 6 # QA custom edit (must survive the upgrade)
     steps:
       - uses: getlake/lake-gate@v0
         with:
