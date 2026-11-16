@@ -2,7 +2,7 @@
 id: add-retries-to-webhook-delivery
 title: "Add retries to webhook delivery"
 author: 356904241+getlake@users.noreply.github.com
-source: cli
+source: mcp
 created: 2026-11-16T07:39:03.550Z
 ---
 # Add retries to webhook delivery
@@ -13,7 +13,7 @@ Webhook deliveries fail silently when the receiver is down. We want bounded retr
 
 ## Steps
 1. Add retry settings (maxAttempts, backoffMs) to config
-2. Design an idempotent delivery queue with a database migration for retry_count
+2. Design an idempotent delivery queue with a database migration for retry_count, with a down-migration and a feature flag to roll back
 3. Implement the retry worker with exponential backoff and jitter
 4. Expose delivery status in the API
 5. Tests for failure paths and duplicate deliveries
@@ -27,7 +27,7 @@ Overall complexity: **high** · Planned per step (default **Opus 5.5**): **$3.04
 | # | Step | Complexity | Planned model | Recommended model | Est. cost |
 |---|---|---|---|---|---|
 | 1 | Add retry settings (maxAttempts, backoffMs) to config | low | Opus 5.5 | Haiku 5.5 | $0.046–$0.18 |
-| 2 | Design an idempotent delivery queue with a database migration for retry_count | high | Opus 5.5 | Opus 5.5 | $2.10–$8.22 |
+| 2 | Design an idempotent delivery queue with a database migration for retry_count, with a down | high | Opus 5.5 | Opus 5.5 | $2.10–$8.22 |
 | 3 | Implement the retry worker with exponential backoff and jitter | medium | Opus 5.5 | Sonnet 5.5 | $0.38–$1.28 |
 | 4 | Expose delivery status in the API | medium | Opus 5.5 | Sonnet 5.5 | $0.38–$1.28 |
 | 5 | Tests for failure paths and duplicate deliveries | low | Opus 5.5 | Haiku 5.5 | $0.13–$0.46 |
