@@ -9,8 +9,6 @@ on:
     types: [submitted, edited, dismissed]
   issue_comment:
     types: [created, edited, deleted]
-  push: # a policy change re-checks open PRs into this branch
-    paths: ['.lake/config.json']
 permissions:
   contents: read
   pull-requests: write # to post and update the summary comment
