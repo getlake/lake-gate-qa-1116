@@ -1,14 +1,4 @@
 {
-  // QA 1116: policy change on main must re-check open PRs (G-03); trailing commas tolerated (G-02)
-  "requiredApprovals": 2,
-  "autoApprove": {
-    "mode": "on",
-    "maxUsd": 1.5,
-    "maxSteps": 3,
-    "maxComplexity": "low",
-  },
-  "budget": {
-    "approverAbove": 5,
-    "approvers": ["getlake"],
-  },
+  "requiredApprovals": 1
+  "autoApprove": { "mode": "on" }
 }
