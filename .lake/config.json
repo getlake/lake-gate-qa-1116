@@ -1,0 +1,13 @@
+{
+  "requiredApprovals": 1,
+  "autoApprove": {
+    "mode": "on",
+    "maxUsd": 1.5,
+    "maxSteps": 3,
+    "maxComplexity": "low"
+  },
+  "budget": {
+    "approverAbove": null,
+    "approvers": []
+  }
+}

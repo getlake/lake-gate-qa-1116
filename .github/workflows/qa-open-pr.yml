@@ -1,0 +1,16 @@
+# QA helper: opens a PR authored by github-actions[bot] so getlake can act as the (non-author) reviewer.
+name: QA open bot PR
+on:
+  workflow_dispatch:
+    inputs:
+      branch: { required: true }
+      title: { required: true }
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  open:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh pr create -R "$GITHUB_REPOSITORY" --head "${{ inputs.branch }}" --base main --title "${{ inputs.title }}" --body "QA PR opened by github-actions[bot] so a different account can review the plan."
+        env: { GH_TOKEN: "${{ github.token }}" }
