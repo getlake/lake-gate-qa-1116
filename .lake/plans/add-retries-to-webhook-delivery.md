@@ -17,7 +17,7 @@ Webhook deliveries fail silently when the receiver is down. We want bounded retr
 3. Implement the retry worker with exponential backoff and jitter (model: Sonnet 5.5)
 4. Expose delivery status in the API (model: Sonnet 5.5)
 5. Tests for failure paths and duplicate deliveries (model: Haiku 5.5)
-6. Update the changelog and the README and docs site [round 7] (model: haiku)
+6. Update the changelog and the README and docs site [round 8] (model: haiku)
 
 <!-- lake:estimate:start (generated, not part of the approved digest) -->
 ## Lake estimate
