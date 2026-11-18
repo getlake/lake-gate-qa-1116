@@ -1,5 +1,5 @@
 {
-  "requiredApprovals": 1,
+  "requiredApprovals": 2,
   "autoApprove": {
     "mode": "on",
     "maxUsd": 1.5,
@@ -7,7 +7,7 @@
     "maxComplexity": "low"
   },
   "budget": {
-    "approverAbove": 5,
+    "approverAbove": 1,
     "approvers": [
       "getlake"
     ]
