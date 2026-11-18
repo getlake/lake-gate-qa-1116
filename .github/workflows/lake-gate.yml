@@ -25,6 +25,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 6 # QA custom edit (must survive the upgrade)
     steps:
-      - uses: getlake/lake-gate@v0
+      - uses: getlake/lake-gate@v0.2.5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
