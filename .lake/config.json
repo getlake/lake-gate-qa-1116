@@ -1,5 +1,5 @@
 {
-  "requiredApprovals": 1
+  "requiredApprovals": 1,
   "autoApprove": {
     "mode": "on",
     "maxUsd": 1.5,
